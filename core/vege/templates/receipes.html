@@ -1,3 +1,30 @@
 {% extends "base.html" %}
+
 {% block title %}Receipes{% endblock title %}
-{% block content %}{% endblock content %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <form class="col-6 mx-auto card p-3" method="POST">
+      <h2>Add Receipe</h2>
+      <hr/>
+        <div class="mb-3">
+          <label for="receipename" class="form-label">Receipe Name</label>
+          <input name="receipe_name" type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <labelclass="form-label">Receipe Description</labelclass=>
+          <textarea name="receipe_description" class="form-control" ></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Receipe Image</label>
+            <input name="receipe_image" type="file" class="form-control">
+          </div>
+
+        <button type="submit" class="btn btn-success">Add Receipe</button>
+      </form>
+</div>
+{% endblock content %}
