@@ -8,8 +8,10 @@ def receipes(request):
         data = request.POST
         receipe_name = data.get('receipe_name')
         receipe_description = data.get('receipe_description')
+        receipe_image = request.FILES.get('receipe_image')
 
         print(receipe_name)
         print(receipe_description)
+        print(receipe_image)
 
     return render(request,'receipes.html')
