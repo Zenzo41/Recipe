@@ -18,4 +18,6 @@ def receipes(request):
 
         return redirect('/')
     
-    return render(request,'receipes.html')
+    all_receipes = Receipe.objects.all()
+    context = {'all_receipes':all_receipes}
+    return render(request,'receipes.html',context)
