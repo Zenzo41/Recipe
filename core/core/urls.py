@@ -11,7 +11,8 @@ urlpatterns = [
     path('',home,name="home"),
     path('contact/',contact,name="contact"),
     path('about/',about,name="about"),
-    path('receipes/',receipes,name="receipes")
+    path('receipes/',receipes,name="receipes"),
+    path('delete_receipe/<id>/',delete_receipe,name="delete_receipe")
 ]
 
 if settings.DEBUG:

@@ -21,3 +21,9 @@ def receipes(request):
     all_receipes = Receipe.objects.all()
     context = {'all_receipes':all_receipes}
     return render(request,'receipes.html',context)
+
+def delete_receipe(request,id):
+    queryset = Receipe.objects.get(id = id)
+    queryset.delete()
+    
+    return redirect('/receipes/')
