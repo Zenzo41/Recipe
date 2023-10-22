@@ -38,7 +38,7 @@ def update_receipe(request,id):
         receipe_description = data.get('receipe_description')
         receipe_image = request.FILES.get('receipe_image')
 
-        queryset.receipe_image = receipe_name
+        queryset.receipe_name = receipe_name
         queryset.receipe_description = receipe_description
 
         if receipe_image:
